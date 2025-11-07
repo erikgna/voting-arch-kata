@@ -1,3 +1,5 @@
+Research better svelte it has NODE
+
 # High-Scale Voting System Architecture
 
 ## Overview
