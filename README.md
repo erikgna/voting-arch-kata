@@ -1,3 +1,5 @@
+Research better svelte it has NODE
+
 # High-Scale Voting System Architecture
 
 ## Overview
@@ -81,7 +83,7 @@ Guarantee vote delivery regardless of network conditions through local persisten
 - Sub-second load times worldwide
 - Zero origin server hits for static content
 
-**Edge Compute:**
+**Edge Runtime:**
 
 - Authentication runs at edge (not origin)
 - Bot detection near users
@@ -109,22 +111,12 @@ Guarantee vote delivery regardless of network conditions through local persisten
 | --------------- | -------------------------- | ------------------------------- |
 | **Framework**   | Next.js                    | Static generation + routing     |
 | **Hosting**     | Cloudflare Pages           | Global CDN edge hosting         |
-| **Edge Logic**  | Cloudflare Workers         | Auth, validation, bot filtering |
 | **Persistence** | Service Worker + IndexedDB | Offline support + retry         |
 | **Real-Time**   | Cloudflare Channels        | Live vote broadcasting          |
 
 ---
 
 ## 5. Why Cloudflare Over AWS?
-
-### Edge Performance
-
-| Feature          | Cloudflare Workers        | AWS Lambda@Edge              |
-| ---------------- | ------------------------- | ---------------------------- |
-| **Startup time** | < 5ms (no cold starts)    | 100-300ms cold starts        |
-| **Coverage**     | Compute at all 300+ edges | Limited edge compute regions |
-| **Deployment**   | Instant (seconds)         | Slow (minutes)               |
-| **Runtime**      | V8 isolates (lightweight) | Full Node.js (heavier)       |
 
 ### Real-Time Capabilities
 
@@ -159,8 +151,6 @@ Guarantee vote delivery regardless of network conditions through local persisten
 Next.js (Static + SSR)
     ↓
 Cloudflare Pages (Hosting)
-    ↓
-Cloudflare Workers (Edge Auth/Validation)
     ↓
 Service Workers (Offline Support)
     ↓
