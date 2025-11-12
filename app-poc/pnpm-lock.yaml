@@ -7,6 +7,10 @@ settings:
 importers:
 
   .:
+    dependencies:
+      idb:
+        specifier: ^8.0.3
+        version: 8.0.3
     devDependencies:
       '@sveltejs/adapter-auto':
         specifier: ^7.0.0
@@ -429,6 +433,9 @@ packages:
     resolution: {integrity: sha512-5xoDfX+fL7faATnagmWPpbFtwh/R77WmMMqqHGS65C3vvB0YHrgF+B1YmZ3441tMj5n63k0212XNoJwzlhffQw==}
     engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
     os: [darwin]
+
+  idb@8.0.3:
+    resolution: {integrity: sha512-LtwtVyVYO5BqRvcsKuB2iUMnHwPVByPCXFXOpuU96IZPPoPN6xjOGxZQ74pgSVVLQWtUOYgyeL4GE98BY5D3wg==}
 
   is-reference@3.0.3:
     resolution: {integrity: sha512-ixkJoqQvAP88E6wLydLGGqCJsrFUnqoH6HnaczB8XmDH1oaWU+xxdptvikTgaEhtZ53Ky6YXiBuUI2WXLMCwjw==}
@@ -854,6 +861,8 @@ snapshots:
 
   fsevents@2.3.3:
     optional: true
+
+  idb@8.0.3: {}
 
   is-reference@3.0.3:
     dependencies:
