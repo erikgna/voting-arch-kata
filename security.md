@@ -31,22 +31,9 @@ The stronger the authentication (WebAuthn + government ID), the harder the UX.
 - Malicious CDN injection
 
 **Tradeoff:**
-To secure code delivery, you need strict controls (CSP + SRI + immutability), which increases operational complexity.
+To secure code delivery, need strict controls (CSP + SRI + immutability).
 
-## (D) End-to-End Vote Integrity
-
-Votes must be validated server-side using:
-
-- One-time voting tokens
-
-- Server-side signature validation
-
-- Ledger storage
-
-**Tradeoff:**
-The server must shoulder more cryptographic responsibility, shifting trust from the client to the backend.
-
-## (E) Privacy vs. Fraud Prevention
+## (D) Privacy vs. Fraud Prevention
 
 - Voter secrecy
 
@@ -55,7 +42,7 @@ The server must shoulder more cryptographic responsibility, shifting trust from 
 - No link between identity and vote
 
 **Tradeoff:**
-The more you anonymize, the harder it is to validate uniqueness.
+The more anonymized, the harder it is to validate uniqueness.
 
 ## 1. User Authentication
 
