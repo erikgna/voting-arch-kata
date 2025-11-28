@@ -56,3 +56,38 @@ The server must shoulder more cryptographic responsibility, shifting trust from 
 
 **Tradeoff:**
 The more you anonymize, the harder it is to validate uniqueness.
+
+## 1. User Authentication
+
+- Use WebAuthn with passkeys or hardware security keys (best). MFA
+
+## 2. Secure Code Distribution
+
+- Loaded via HTTPS
+- Protected with Content-Security-Policy (CSP)
+- Protected with Subresource Integrity (SRI)
+- Served from immutable paths (e.g. /app.<hash>.js)
+
+## 3. Vote Signing (Web Approach)
+
+- Server issues a one-time signed voting token after authentication.
+
+- Browser uses this token to submit the vote.
+
+- Server verifies token signatures + uniqueness.
+
+5. Immutable Storage
+
+- Ledger database (QLDB)
+
+- Ensures the vote cannot be altered.
+
+6. DDoS + Network Protection
+
+- CDN + WAF
+
+- Bot detection
+
+- mTLS optionally for admins
+
+- Geo and residency rules
