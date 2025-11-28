@@ -17,12 +17,7 @@
 1. Unit Testing (Vitest + @testing-library/svelte)
 2. Testing Svelte Stores
 3. Testing Reactive Statements
-
-## Testing Pyramid
-
-- 70% Unit Tests - Fast, test individual functions/components
-- 20% Integration Tests - Test component interactions
-- 10% E2E Tests - Test critical user flows
+4. 4. E2E Testing (Playwright/Cypress)
 
 ## Vue-Specific Tips
 
@@ -40,7 +35,7 @@
 - Use tick() for waiting for reactivity updates
 - Test Svelte 5 runes ($state, $derived, $effect)
 
-##Tools Summary
+## Tools Summary
 
 ### Vue:
 
